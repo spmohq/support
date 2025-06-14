@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support | Siva Prasad Mukherjee</title>
+  <link rel="icon" type="image/x-icon" href="spm.ico" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Noto Sans Bengali', sans-serif;
+      background-color: #fdfdfd;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+    .container {
+      max-width: 500px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    p {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #1ebe5d;
+    }
+  </style>
+  <script>
+    // Prevent right-click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Prevent copy, cut, drag, and text selection
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('cut', e => e.preventDefault());
+    document.addEventListener('dragstart', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
+
+    // Prevent view source and developer tools
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X')) {
+        e.preventDefault();
+      }
+      if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i'))) {
+        e.preventDefault();
+      }
+    });
+
+    // WhatsApp button function
+    function openWhatsApp() {
+      const phoneNumber = "919883787947";
+      const message = encodeURIComponent("Hi! I saw your post and want to connect.");
+      const waUrl = "https://wa.me/" + phoneNumber + "?text=" + message;
+      window.location.href = waUrl;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>আমি পাশে আছি</h1>
+    <p>
+      যদি কোনো প্রশ্ন থাকে বা বুঝতে গিয়ে কোথাও আটকে যাও, তবে একবার আমাকে মেসেজ করো। আমি নিজে তোমার সঙ্গে কথা বলব এবং যা দরকার তা দিয়ে সাহায্য করব—একজন বন্ধু ও সহায়কের মতো।
+    </p>
+    <button class="btn" onclick="openWhatsApp()">WhatsApp-এ বার্তা পাঠাও</button>
+  </div>
+</body>
+</html>
